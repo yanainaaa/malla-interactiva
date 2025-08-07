@@ -1,14 +1,14 @@
 // Créditos mínimos por área y total
 const CREDITOS_MINIMOS = {
-  "ECONOMÍA": 10,
-  "MÉTODOS CUANTITATIVOS": 30,
-  "CONTABILIDAD E IMPUESTOS": 50,
-  "CREDITOS DE DISTRIBUCIÓN FLEXIBLE": 30,
-  "JURÍDICA": 30,
-  "ACTIVIDADES INTEGRADORAS": 15,
-  "ADMINISTRACIÓN": 60
+  "ECONOMÍA": 30,
+  "MÉTODOS CUANTITATIVOS": 40,
+  "CONTABILIDAD E IMPUESTOS": 130,
+  "CIENCIAS SOCIALES Y HUMANISTICAS": 40,
+  "JURÍDICA": 40,
+  "ACTIVIDADES INTEGRADORAS": 20,
+  "ADMINISTRACIÓN": 50
 };
-const CREDITOS_TOTALES = 225;
+const CREDITOS_TOTALES = 360;
 
 // Normalización de nombres de áreas
 function normalizarArea(area) {
@@ -16,7 +16,7 @@ function normalizarArea(area) {
   if (a.startsWith("CONTABILIDAD")) return "CONTABILIDAD E IMPUESTOS";
   if (a.startsWith("ECONOMÍA")) return "ECONOMÍA";
   if (a === "MÉTODOS CUANTITATIVOS" || a === "METODOS CUANTITATIVOS") return "MÉTODOS CUANTITATIVOS";
-  if (a.includes("FLEXIBLE")) return "CREDITOS DE DISTRIBUCIÓN FLEXIBLE";
+  if (a.includes("CIENCIAS SOCIALES")) return "CIENCIAS SOCIALES";
   if (a.startsWith("JURÍDICA") || a.startsWith("JURIDICA")) return "JURÍDICA";
   if (a.startsWith("ACTIVIDADES")) return "ACTIVIDADES INTEGRADORAS";
   if (a.startsWith("ADMINISTRACIÓN") || a.startsWith("ADMINISTRACION")) return "ADMINISTRACIÓN";
